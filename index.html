@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>DeNotes App</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
+	<link rel="stylesheet" href="design.css" />
+	
+</head>
+
+<body>
+	<div class="add-new-note-btn" title="Add New Note">+</div>
+
+	<nav class="nav-bar">
+		<li class="logo">
+			<a href="#">DeNotes</a>
+		</li>
+		<code class="press-n">Press ctrl + N for new note </code>
+		<li class="search-bar">
+			<input onkeyup="searchFunction()" type="text" class="search-box" placeholder="search here...">
+			<img src="./assets/search.png" class="search-icon" alt="" width="40px" height="40px">
+		</li>
+	</nav>
+
+
+	<section class="notes-section">
+		<div class="note">
+			 <div class="note-action" onclick='displayBig(this)'>
+				<i class="fas fa-expand"></i>
+			</div> 
+			<h3 class="note-title">Hello There</h3>
+			<p class="note-desc">
+			This is a test note. Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo saepe unde nemo suscipit tempora dolores amet velit! Suscipit tempore autem nam ad nesciunt dolore perspiciatis at laborum laboriosam repellendus accusantium sint quam expedita commodi magnam, id, ratione repudiandae aliquam hic.</p>
+			<p class="note-date">Apr 17 2021</p>
+		</div>
+	</section>
+
+
+	<div class="new-note-modal">
+		<div class="new-note">
+			<div class="btns">
+				<div class="close-btn">&Cross;</div>
+				<div class="save-btn">Save</div>
+			</div>
+
+			<div class="note-body">
+				<input type="text" class="title new-title" placeholder="Title">
+				<textarea name="" id="" cols="30" rows="10" placeholder="Type something..."
+					class="desc new-desc"></textarea>
+			</div>
+		</div>
+	</div>
+
+
+	<div class="warning-message">
+		<span class="mark">&check;</span> New Note Added.
+	</div>
+
+	<div class="warning-message error-message">
+		<span class="mark cross">&Cross;</span> Empty Field Detected.
+	</div>
+
+
+
+<script src="app.js"></script>
+
+	
+</body>
+
+</html>
